@@ -40,4 +40,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    //funcion para recoger imagen del usuario desde la BD, ahora genera automaticamente
+    public function adminlte_image()
+    {
+        return 'https://picsum.photos/300/300';
+    }
+    //funcion para recoger el rol del que ingresa al panel
+    public function adminlte_desc()
+    {
+        return 'Administrador';
+    }
 }
+

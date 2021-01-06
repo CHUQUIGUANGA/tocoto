@@ -1,9 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\WelcomeUserController;
-
+use App\Http\Controllers\Admin\CategoriesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,28 +10,33 @@ use App\Http\Controllers\WelcomeUserController;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-| 
-    las rutas se cargan en orden 
+|
 */
 
-Route::get('/', function(){
-    return 'Home';
-});
-
-Route::get('/usuarios',[UserController::class,'index']);
-
-
-//detalles de usuarios no es igual que usuario nuevo 
-Route::get ('/usuarios/{id}',[UserController::class,'show'])
-        ->where('id','[0-9]+');
-
-Route::get('/usuarios/nuevo',[UserController::class,'create']);
-
-//hacemos uso del controlador , pero usando el metodo invoke 
-Route::get('/saludo/{name}/{nickname?}',WelcomeUserController::class);
-
-/*
 Route::get('/', function () {
     return view('welcome');
 });
-*/
+Route::get('/home', function () {
+    return view('welcome');
+});
+
+Route::get('/center',function (){ 
+    return view('center');
+});
+
+Route::get('/activity',function (){ 
+    return view('activity');
+});
+Route::get('/blog',function (){ 
+    return view('blog');
+});
+
+
+//Route::get('/blog', [HomeController::class, 'blog']);
+//autentificacion de usuario 
+Auth::routes();
+
+//ruta a mostrar despues de la autentificacion y la funcion a ejecutar en el controlador
+Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/panel', [CategoriesController::Class,'panel']);
