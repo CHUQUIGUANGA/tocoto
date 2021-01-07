@@ -1,4 +1,5 @@
 @extends('adminlte::page')
+
 @section('title', 'TOCOTO_PERFIL')
 @section('content')
 <div class="container">
@@ -14,6 +15,7 @@
                         </div>
                     @endif
                     <!--Este es el cuerpo del perfil del cliente o admin de centro-->
+                    
                     {{ __('Tu estas logeado en tocoto!') }}
                 </div>
             </div>

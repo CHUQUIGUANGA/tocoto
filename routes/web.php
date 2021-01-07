@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoriesController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +38,11 @@ Route::get('/blog',function (){
 Auth::routes();
 
 //ruta a mostrar despues de la autentificacion y la funcion a ejecutar en el controlador
-Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/profile', [HomeController::class, 'index'])->name('home');
 
-Route::get('/panel', [CategoriesController::Class,'panel']);
+Route::get('/profile/monitor', [HomeController::Class,'profile'])->name('perfilM');
+Route::get('/profile/actividades', [HomeController::Class,'activities'])->name('activityM');
+Route::get('/profile/materiales', [HomeController::Class,'tools'])->name('toolM');
+Route::get('/profile/salas', [HomeController::Class,'rooms'])->name('roomM');
+Route::get('/profile/posts', [HomeController::Class,'posts'])->name('postM');
+

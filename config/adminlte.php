@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Tocoto',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -230,6 +230,11 @@ return [
             'topnav' => true,
         ],
         [
+            'text' => 'HOME',
+            'url' => 'home',
+            'topnav' => true,
+        ],
+        [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
@@ -241,16 +246,36 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        ['header' => ''],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Perfil',
+            'url'  => '/profile/monitor',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Actividades',
+            'url'  => '/profile/actividades',
+            'icon' => 'fas fa-fw fa-chart-line',
+        ],
+        [
+            'text' => 'Reserva de Salas',
+            'url'  => '/profile/salas',
+            'icon' => 'fab fa-accusoft',
+        ],
+        [
+            'text' => 'Reserva de Equipos',
+            'url'  => '/profile/materiales',
+            'icon' => 'fas fa-fw fa-toolbox',
+        ],
+        [
+            'text' => 'Posts',
+            'url'  => '/profile/posts',
+            'icon' => 'fas fa-fw fa-paste',
+        ],
+        [
+            'text' => 'Configuracion',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw  fa-cogs',
         ],
         [
             'text'    => 'multilevel',
@@ -344,7 +369,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',

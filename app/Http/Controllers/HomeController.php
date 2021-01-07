@@ -28,4 +28,25 @@ class HomeController extends Controller
         
     }
 
+    public function profile(){
+
+        return view('/monitor/profileM');
+    }
+    
+    public function activities(){
+
+        return view('/monitor/activities');
+    }
+    public function tools(){
+
+        return view('/monitor/tools');
+    }
+    public function rooms(){
+
+        return view('/monitor/rooms');
+    }
+    public function posts(){
+
+        return view('/monitor/posts');
+    }
 }

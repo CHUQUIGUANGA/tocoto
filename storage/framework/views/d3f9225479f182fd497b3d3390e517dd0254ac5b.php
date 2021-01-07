@@ -14,6 +14,7 @@
                         </div>
                     <?php endif; ?>
                     <!--Este es el cuerpo del perfil del cliente o admin de centro-->
+                    
                     <?php echo e(__('Tu estas logeado en tocoto!')); ?>
 
                 </div>
