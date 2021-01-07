@@ -63,7 +63,18 @@ nav,
 section {
   display: block;
 }
-
+main>.login{
+  height: 40em;
+  background-image:  linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),url(../images/joven.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login>div>div>.card{
+  border: rgb(241, 241, 11) solid 1px;
+}
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;

@@ -1,0 +1,2 @@
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/ludiscover/laravel/tocotolog/tocotolog2/resources/views/activity.blade.php ENDPATH**/ ?>

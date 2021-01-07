@@ -179,7 +179,10 @@
     </div>
 
     <main class="py-0 ">
-             @yield('content')
+  
+        @yield('content')
+  
+           
         <div class="container-fluid  ">
            <!--cabecera -->
             @yield('headf')
